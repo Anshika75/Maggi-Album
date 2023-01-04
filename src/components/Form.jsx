@@ -25,7 +25,7 @@ export default function Form() {
         <div className="output mt-3">
           {error && <div className="error trirong red_grad_txt opacity-90">{error}</div>}
           {file && <div className='white_grad_txt trirong font-light opacity-75'>{file.name}</div>}
-          {file && <Progress />}
+          {file && <Progress file={file} setFile={setFile} />}
         </div>
       </form>
     </>
