@@ -20,6 +20,9 @@
 .trirong{
   font-family: 'Trirong', serif;
 }
+.purple_grad{
+  background: linear-gradient(#e66465, #9198e5);
+}
 .purple_grad_txt{
   background: linear-gradient(#e66465, #9198e5);
   background-clip: text;

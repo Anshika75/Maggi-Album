@@ -22,7 +22,7 @@ const ProgressBar = ({ file, setFile }) => {
   }, [url, setFile]);
 
   return (
-    <div className="progress-bar"></div>
+    <div className="progress-bar h-[5px] purple_grad rounded-xl" style={{width: progress + '%'}}></div>
   );
 } 
 
