@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from './components/Container'
 import Form from './components/Form'
 import Head from './components/Head'
 import Title from './components/Title'
@@ -10,6 +11,7 @@ export default function App() {
         <Head/>
         <Title/>
         <Form/>
+        <Container/>
       </div>
     </>
   )

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { projectStorage, projectFirestore } from "../firebase/config";
+import { projectStorage, projectFirestore, timestamp } from "../firebase/config";
 import {ref,getDownloadURL,uploadBytesResumable} from "firebase/storage";
+
 
 export default function Storage(file) {
     const [progress, setProgress] = useState(0);
@@ -18,7 +19,7 @@ export default function Storage(file) {
             setError(err);
         }, () => {
             getDownloadURL(uploadTask.snapshot.ref).then(
-               async (url) => {
+                (url) => {
                     // const url = await storageRef.getDownloadURL();
                     collectionRef.add({ url, createdAt: timestamp() });
                     setUrl(url);
