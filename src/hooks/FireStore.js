@@ -15,5 +15,5 @@ export default function FireStore(collection) {
             });
         return () => unsub();
     }, [collection]);
-  return (docs);
+  return ({docs});
 }

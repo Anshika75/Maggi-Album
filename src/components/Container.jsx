@@ -4,10 +4,10 @@ export default function Container() {
     const { docs } = FireStore('images');
     console.log(docs);
   return (
-    <div className='img-grid'>
-        {docs && docs.map(doc => (
-            <div className='img-wrap' key={doc.id}>
-                <img src={doc.url} alt='uploaded pic' />
+    <div className='flex flex-row flex-wrap justify-center items-start '>
+        {docs && docs.map(e => (
+            <div className='h-[250px] w-[250px] border border-white m-2' key={e.id}>
+                <img className='h-full w-full' src={e.url} alt='uploaded pic' />
                 </div>
         ))}
     </div>
