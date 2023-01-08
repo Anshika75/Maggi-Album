@@ -4,7 +4,7 @@ export default function Container() {
     const { docs } = FireStore('images');
     console.log(docs);
   return (
-    <div className='flex flex-row flex-wrap justify-center items-start mt-5'>
+    <div className='flex flex-row flex-wrap justify-center items-start mt-5w-[90%]'>
         {docs && docs.map(e => (
             <div className={
                   e.id % 2 == 0
