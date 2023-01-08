@@ -7,6 +7,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 .bg{
   background-image: url("https://img.freepik.com/free-photo/black-smooth-textured-paper_53876-96064.jpg?auto=format&h=200");
   background-size: cover;
