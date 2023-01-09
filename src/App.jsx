@@ -14,7 +14,7 @@ export default function App() {
         <Title/>
         <Form/>
         <Container setSelectedImage={setSelectedImage}/>
-        <Modal selectedImage={selectedImage}/>
+        { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
       </div>
     </>
   )
