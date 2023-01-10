@@ -14,6 +14,7 @@ export default function Container({setSelectedImage}) {
                     : "opacity-75 h-[250px] w-[200px] bg-[#EDEADE] p-[10px] pb-[30px] m-5 shadow-[0_4px_6px_rgba(0,0,0,.3)] transition-all hover:rotate-6 duration-500"
                 } key={i}
                   layout
+                  transition={{ duration: 0.5 }}
                   whileHover={{ opacity: 1 }}
                   onClick={() => setSelectedImage(e.url)}
                 >
