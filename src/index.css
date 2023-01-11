@@ -2,61 +2,93 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
-.bg{
+
+.bg {
   background-image: url("https://img.freepik.com/free-photo/black-smooth-textured-paper_53876-96064.jpg?auto=format&h=200");
   background-size: cover;
 }
-.lobster{
+
+.lobster {
   font-family: 'Lobster Two', cursive;
 }
-.lato{
+
+.lato {
   font-family: 'Lato', sans-serif;
 }
-.trirong{
+
+.trirong {
   font-family: 'Trirong', serif;
 }
-.purple_grad{
+
+.purple_grad {
   background: linear-gradient(#e66465, #9198e5);
 }
-.purple_grad_txt{
+
+.purple_grad_txt {
   background: linear-gradient(#e66465, #9198e5);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.red_grad_txt{
+
+.red_grad_txt {
   background: linear-gradient(#DB3445, #f71735);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.white_grad_txt{
+
+.white_grad_txt {
   background: linear-gradient(#aacaef, #fde7f9);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.purple_grad_border{
+
+.purple_grad_border {
   border-image: linear-gradient(#e66465, #9198e5);
   border-image-slice: 1;
   transition: all 0.5s ease;
   background: transparent;
 }
-.purple_grad_border:hover{
+
+.purple_grad_border:hover {
   background: linear-gradient(#e66465, #9198e5);
   opacity: 0.5;
 }
-.purple_grad_border:hover .purple_grad_txt{
+
+.purple_grad_border:hover .purple_grad_txt {
   background: linear-gradient(#000000, #000000);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
+}
+
+.purple_grad_border_bg {
+  border-image: linear-gradient(#e66465, #9198e5);
+  border-image-slice: 1;
+  animation: border 2s linear infinite alternate both;
+}
+
+@keyframes border {
+  from {
+    border-image: linear-gradient(#e66465, #9198e5);
+    border-image-slice: 1;
+  }
+
+  to {
+    border-image: linear-gradient(#9198e5, #e66465);
+    border-image-slice: 1;
+
+  }
 }
