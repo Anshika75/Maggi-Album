@@ -5,7 +5,7 @@ export default function Form() {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
   const types = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/svg+xml', 'image/webp', 'image/bmp', 'image/tiff', 'image/x-icon'];
-  const changeHandle = (e) => {
+  const changeHandle = (e) => { 
     let selected = e.target.files[0];
     if (selected && types.includes(selected.type)) {
       setFile(selected);
