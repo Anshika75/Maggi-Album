@@ -3,7 +3,7 @@ import { projectStorage, projectFirestore, timestamp } from "../firebase/config"
 import {ref,getDownloadURL,uploadBytesResumable} from "firebase/storage";
 
 
-export default function Storage(file) {
+export default function Storage(file,tag) {
     const [progress, setProgress] = useState(0);
     const [error, setError] = useState(null);
     const [url, setUrl] = useState(null);
@@ -21,7 +21,8 @@ export default function Storage(file) {
             getDownloadURL(uploadTask.snapshot.ref).then(
                 (url) => {
                     // const url = await storageRef.getDownloadURL();
-                    collectionRef.add({ url, createdAt: timestamp() });
+    
+                    collectionRef.add({ url, createdAt: timestamp(),tag});
                     setUrl(url);
                 }
             );

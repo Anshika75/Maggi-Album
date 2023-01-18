@@ -19,7 +19,7 @@ export default function Container({setSelectedImage}) {
                   onClick={() => setSelectedImage(e.url)}
                 >
                 <img className='layout h-[200px] w-full transition-all hover:scale-110 duration-1000 cursor-pointer' src={e.url} alt='uploaded pic' />
-                <div className="w-full bg-[#1D1D1D] rounded h-3 mt-3"></div>
+                <div className="w-full bg-[#1D1D1D] rounded h-3 mt-3">{e.tag?e.tag:""}</div>
             </motion.div>
         ))}
     </div>
