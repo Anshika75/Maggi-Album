@@ -1,13 +1,3 @@
-// import React from 'react'
-// import Storage from '../hooks/Storage'
-
-// export default function Progress(file, setFile) {
-//     const { progress, url } = Storage(file);
-//     console.log(progress, url);
-//   return (
-//     <div>Progress</div>
-//   )
-// }
 import React, { useEffect } from 'react';
 import Storage from '../hooks/Storage';
 const ProgressBar = ({ file, setFile ,tag,settag}) => {
