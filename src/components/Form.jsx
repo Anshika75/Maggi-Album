@@ -14,6 +14,9 @@ export default function Form() {
       setFile(null);
       setError('Please select a valid image file.');
     }
+    e.target.type ="text";
+    e.target.type ="file";
+    
   }
   return (
     <>
