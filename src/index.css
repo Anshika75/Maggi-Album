@@ -66,6 +66,10 @@ body {
   background: linear-gradient(#e66465, #9198e5);
   opacity: 0.5;
 }
+.purple_grad_border_hover {
+  background: linear-gradient(#e66465, #9198e5);
+  opacity: 0.5;
+}
 
 .purple_grad_border:hover .purple_grad_txt {
   background: linear-gradient(#000000, #000000);
@@ -73,7 +77,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
 }
-
+.purple_grad_txt_hover {
+  background: linear-gradient(#000000, #000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
 .purple_grad_border_bg {
   border-image: linear-gradient(#e66465, #9198e5);
   border-image-slice: 1;
