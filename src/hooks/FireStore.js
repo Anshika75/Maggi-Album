@@ -1,7 +1,13 @@
 import { useState, useEffect } from 'react'
 import { projectFirestore } from "../firebase/config";
-
-export default function FireStore(collection) {
+function deleteById(docId){
+    projectFirestore.collection("images").doc(docId).delete().then(() => {
+        console.log("Document successfully deleted!");
+    }).catch((error) => {
+        console.error("Error removing document: ", error);
+    });
+}
+function FireStore(collection) {
     const [docs, setDocs] = useState([]);
     useEffect(() => {
         const unsub = projectFirestore.collection(collection)
@@ -17,3 +23,5 @@ export default function FireStore(collection) {
     }, [collection]);
   return ({docs});
 }
+
+export {FireStore,deleteById}

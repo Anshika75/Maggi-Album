@@ -1,5 +1,5 @@
 import React from 'react'
-import FireStore from '../hooks/FireStore';
+import {deleteById, FireStore} from '../hooks/FireStore';
 import { motion } from 'framer-motion';
 
 export default function Container({setSelectedImage, tag}) {
@@ -21,6 +21,9 @@ export default function Container({setSelectedImage, tag}) {
                 <img className='layout h-[200px] w-full transition-all hover:scale-110 duration-1000 cursor-pointer' src={e.url} alt='uploaded pic' />
                 <div className="w-full bg-[#1D1D1D] rounded h-3 mt-3"></div>
                 <p className='red_grad_txt font-bold lowercase'>#{e.tag?e.tag:""}</p>
+                {localStorage.getItem('user') == "admin" ? (
+                <button onClick={() => {deleteById(e.id);}} className='bg-[#1D1D1D] text-white rounded p-2 mt-3'>Delete</button>
+                ) : ""}
             </motion.div> ) : ""
         ))}
     </div>
