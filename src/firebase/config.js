@@ -6,7 +6,6 @@ import 'firebase/compat/firestore';
 import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 // import { getAnalytics } from "firebase/analytics";
-
 const firebaseConfig = {
   apiKey: "AIzaSyAIuX2HpsBOC7O6-JldU-lRNBWGKF0OcYU",
   authDomain: "maggi-album.firebaseapp.com",
